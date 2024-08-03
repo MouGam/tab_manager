@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "탭 저장소",
+  "version": "1.2",
+  "description":"크롬 탭이 어지럽게 열려있을 때, 북마크에 일일이 추가하기 귀찮을 때, 메모리를 아까고 싶을 때.\n딸각 한번으로 현재 윈도우와 탭들을 깔끔하게 정리하세요.",
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/icon-32.png",
+    "default_title":"탭 저장"
+  },
+  "host_permissions": [
+    "https://developer.chrome.com/*"
+  ],
+  "permissions": [
+    "tabs",
+    "storage"
+  ]
+}
+  

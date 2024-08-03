@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- li_template 이 부분은 다른 탭의 정보를 담을 틀-->
+    <template id="li_tab_template">
+      <li>
+        <a>
+          <h3 class="title">Tab Title</h3>
+          <p class="pathname">Tab Pathname</p>
+        </a>
+        <button class="delete_tab">삭제</button>
+      </li>
+    </template>
+    <!-- 현재 탭의 정보를 담을 틀 -->
+    <template id="current_tab_template">
+      <li>
+        <h3 class="title">Tab Title</h3>
+        <p class="pathname">Tab Pathname</p>
+      </li>
+    </template>
+
+    <!-- 현재 윈도우의 정보를 담을 틀 -->
+    <template id="current_window_template">
+      <li>
+        <a>
+          <h3 class="title">Window Title</h3>
+          <p class="description">Window Description</p>
+        </a>
+        <button class="delete_window">삭제</button>
+      </li>
+    </template>
+
+    <!-- 저장한 윈도우의 정보를 답을 틀 -->
+    <template id="li_window_template">
+      <li>
+        <a>
+          <h3 class="title">Window Title</h3>
+          <p class="description">Window Description</p>
+        </a>
+        <button class="delete_window">삭제</button>
+      </li>
+    </template>
+
+
+    <div id="title">
+      <h1 id="window_title" class="now_title">윈도우 저장소</h1>
+      <h1 id="tab_title" class="not_now_title">탭 저장소</h1>
+    </div>
+
+    <!-- 윈도우 보여주는 부분 -->
+    <div id="window">
+      <h2>현재 윈도우 저장</h2>
+      <input class="current_window_input" id="current_window_title" type="text" placeholder="현재 윈도우의 이름"/><br/>
+      <textarea class="current_window_input" id="current_window_description" placeholder="현재 윈도우의 설명"></textarea><br/>
+      <button id="add_window_button">윈도우 저장</button>
+
+      <ul id="li_window"></ul>
+    </div>
+
+    <!-- 탭 보여주는 부분 -->
+    <div id="tab" class="not_now">
+      <h2>현재 탭</h2>
+      <ul id="current_tab"></ul>
+      <button id="add_tab">탭 저장</button>
+
+      <ul id="li_tab"></ul>
+    </div>
+    
+    <script src="./popup.js" type="module"></script>
+    <script src="./window.js" type="module"></script>
+    <script src="./title.js" type="module"></script>
+  </body>
+</html>
